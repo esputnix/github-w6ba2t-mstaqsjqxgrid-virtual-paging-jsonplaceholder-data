@@ -1,0 +1,9 @@
+<jqxGrid #myGrid 
+  [source]="dataAdapter" 
+  [columns]="columns"
+  (onCellclick)="onCellClick($event)"
+  [width]="800"
+  [pageable]="true"
+  [virtualmode]="true"
+  [rendergridrows]="rendergridrows">
+</jqxGrid>
