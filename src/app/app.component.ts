@@ -30,7 +30,7 @@ export class AppComponent {
   dataAdapter: any = new jqx.dataAdapter(this.source);
 
   rendergridrows = (params: any): any[] => {
-    console.log("...3 rendergridrows", params);
+    // console.log("...3 rendergridrows", params);
     return params.data;
   }
 
@@ -38,11 +38,17 @@ export class AppComponent {
   onCellClick(event: any): void | boolean { 
     // console.dir(this.myGrid);
 
-    let rowindex =  event.args.rowindex;
-    console.log("rowindex:", rowindex);
+    // let rowindex =  event.args.rowindex;
+    // console.log("rowindex:", rowindex);
 
-    let dataindex = this.myGrid.getrowid(rowindex)
-    console.log("dataindex:", dataindex);
+    // let dataindex = this.myGrid.getrowid(rowindex)
+    // console.log("dataindex:", dataindex);
+
+    console.log(this.myGrid.source());
+
+    let loadedData = this.myGrid.source().loadedData;
+    console.log(loadedData);
+
    
   }
 
